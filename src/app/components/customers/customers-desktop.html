@@ -1,0 +1,21 @@
+<div class="homepage__slider">
+  <h1>Our customers love Cilantro</h1>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" ng-repeat="customer in vm.customers">
+        <div><img ng-src="{{customer.avatar.fields.file.url}}" alt=""></div>
+        <p ng-bind="customer.description"></p>
+        <h6 ng-bind="customer.name"></h6>
+      </div>
+    </div>
+
+    <!-- Add Arrows -->
+    <div class="swiper-button-next">
+      <img src="../../../assets/images/homepage/arrow-right.svg" alt="">
+    </div>
+    <div class="swiper-button-prev">
+      <img src="../../../assets/images/homepage/arrow-left.svg" alt="">
+    </div>
+  </div>
+
+</div>

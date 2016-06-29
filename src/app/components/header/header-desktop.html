@@ -1,0 +1,36 @@
+<!--<cil-notify></cil-notify>-->
+
+<div class="header hidden-xs">
+  <div class="clearfix header__container">
+    <a ng-href="#/" class="clearfix header__logo">
+      <img class="bg" src="../../../assets/images/logo-green.svg" alt="">
+      <img class="nobg" class="" src="../../../assets/images/logo-white.svg" alt="">
+    </a>
+
+    <div class="header__menu">
+      <ul class="list-unstyled list-inline">
+        <li>
+          <a ng-href="#/how-it-works" class="cillink bg" ng-class="{'active': vm.$location.path() === '/how-it-works'}"><span>How it works</span></a>
+          <a ng-href="#/how-it-works" class="cillink cillink--white nobg" ng-class="{'active': vm.$location.path() === '/how-it-works'}"><span>How it works</span></a>
+        </li>
+        <li>
+          <a ng-href="#/pricing" class="cillink bg" ng-class="{'active': vm.$location.path() === '/pricing'}">Pricing</a>
+          <a ng-href="#/pricing" class="cillink cillink--white nobg" ng-class="{'active': vm.$location.path() === '/pricing'}">Pricing</a>
+          </li>
+      </ul>
+    </div>
+
+    <div class="header__auth">
+      <ul class="list-unstyled list-inline">
+        <li>
+          <a ng-href="{{vm.login}}" class="cillink text-uppercase bg">Login</a>
+          <a ng-href="{{vm.login}}" class="cillink text-uppercase cillink--white nobg">Login</a>
+        </li>
+        <li>
+          <a ng-click="vm.signup()" class="cillink text-uppercase cillink--bgBlue bg">Sign up</a>
+          <a ng-click="vm.signup()" class="cillink text-uppercase cillink--white nobg">Sign up</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

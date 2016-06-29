@@ -1,0 +1,28 @@
+<div class="homepage" ng-hide="vm.isMobile">
+  <cil-header-desktop class="homepage__header header--nobg"></cil-header-desktop>
+
+  <cil-landing-desktop landing="vm.landing"></cil-landing-desktop>
+
+  <cil-steps-desktop steps="vm.steps"></cil-steps-desktop>
+
+  <cil-customers-desktop customers="vm.customers"></cil-customers-desktop>
+
+  <cil-waiting-for title="{{vm.basic.fields.createNowHeadline}}" btn="{{vm.basic.fields.createNowButton}}"></cil-waiting-for>
+
+  <cil-footer></cil-footer>
+</div>
+
+<div class="homepage homepage--mobile" ng-show="vm.isMobile">
+  <cil-header-mobile></cil-header-mobile>
+
+  <cil-landing-mobile landing="vm.landing"></cil-landing-mobile>
+
+  <cil-steps-mobile steps="vm.steps"></cil-steps-mobile>
+
+  <cil-customers-mobile customers="vm.customers"></cil-customers-mobile>
+
+  <cil-waiting-for title="{{vm.basic.fields.createNowHeadline}}" btn="{{vm.basic.fields.createNowButton}}"></cil-waiting-for>
+
+  <cil-footer></cil-footer>
+</div>
+

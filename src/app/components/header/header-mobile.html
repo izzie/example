@@ -1,0 +1,25 @@
+<!--<cil-notify></cil-notify>-->
+
+<div class="header header--mobile">
+  <div class="clearfix header__container">
+    <a ng-click="vm.toggleMenu()" class="header__hamburger">
+      <img src="../../../assets/images/hamburger.svg" alt="">
+    </a>
+    <a ng-href="#/" class="header__logo">
+      <img src="../../../assets/images/logo-green-mobile.svg" alt="">
+    </a>
+    <div class="header__signup">
+      <a ng-click="vm.signup()" class="cillink cillink--blue">Sign Up</a>
+    </div>
+  </div>
+</div>
+
+<div class="header__menu--mobile">
+  <div>
+    <ul class="list-unstyled">
+      <li><a ng-href="#/how-it-works" class="cillink" ng-class="{'active': vm.$location.path() === '/how-it-works'}">How it works</a></li>
+      <li><a ng-href="#/pricing" class="cillink" ng-class="{'active': vm.$location.path() === '/pricing'}">Pricing</a></li>
+      <li><a ng-click="vm.signup()" class="cilbtn text-uppercase">signup</a></li>
+    </ul>
+  </div>
+</div>

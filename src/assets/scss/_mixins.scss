@@ -1,0 +1,47 @@
+/**
+ * Customize Mixin For Cilantro
+ */
+
+@mixin cut-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin centerer-percent($percent) {
+  position: absolute;
+  top: $percent;
+  left: 50%;
+  transform: translate(-50%, 0-$percent);
+}
+
+@mixin vertical-centerer {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: 768px) { @content; }
+  }
+  @else if $media == mobile-i4 {
+    @media only screen and (max-height: 480px) and (max-width: 320px){ @content; }
+  }
+  @else if $media == mobile-i5 {
+    @media only screen and (max-height: 568px) and (max-width: 320px) { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: 768px + 1) { @content; }
+  }
+  @else if $media == desktop-small {
+    @media only screen and (min-width: 768px + 1) and (max-width: 860px) { @content; }
+  }
+}

@@ -1,0 +1,489 @@
+.homepage{
+  height: 100%;
+  text-align: center;
+
+  &__container--mobile{
+    width: 100%;
+    height: 100%;
+  }
+
+  &__animated{
+    height: 100%;
+    position: relative;
+  }
+
+  .random-bg{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $color-white;
+    background-position: center center;
+
+    &.random-bg1{
+      background-image: url("../../../assets/images/homepage/bg-1.jpg");
+    }
+    &.random-bg2{
+      background-image: url("../../../assets/images/homepage/bg-2.jpg");
+    }
+    &.random-bg3{
+      background-image: url("../../../assets/images/homepage/bg-3.jpg");
+    }
+    &.random-bg4{
+      background-image: url("../../../assets/images/homepage/bg-4.jpg");
+    }
+    &.random-bg5{
+      background-image: url("../../../assets/images/homepage/bg-5.jpg");
+    }
+  }
+
+  &__placeholder{
+    position: absolute;
+    z-index: -1;
+    &--1{
+      top: 300px;
+    }
+    &--2{
+      top: 800px;
+    }
+    &--3{
+      top: 1300px;
+    }
+    &--4{
+      top: 1800px;
+    }
+  }
+
+  &__panel{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    overflow: hidden;
+    @include respond-to(mobile){
+      position: relative;
+    }
+
+    h1{
+      font-weight: 500;
+      font-size: 48px;
+      text-align: left;
+    }
+    h6{
+      font-weight: 500;
+      font-size: 20px;
+      text-align: left;
+    }
+    .desc{
+      position: absolute;
+      h1{
+        line-height: 1.3em;
+        font-size: 33px;
+        font-weight: 500;
+      }
+      p{
+        text-align: left;
+        font-size: 18px;
+        font-weight: 300;
+      }
+      h6{
+        font-size: 17px;
+        font-weight: 500;
+      }
+      &--1{
+        left: 80px;
+        bottom: 300px;
+        width: 260px;
+        h1{
+          width: 186px;
+        }
+      }
+      &--2{
+        right: 315px;
+        bottom: 80px;
+      }
+      &--3{
+        right: 20px;
+        bottom: 360px;
+        width: 240px;
+      }
+      &--4{
+        left: 410px;
+        bottom: 80px;
+      }
+      &--5{
+        right: 160px;
+        bottom: 210px;
+        width: 360px;
+      }
+      &--6{
+        left: 180px;
+        bottom: 80px;
+      }
+    }
+    .description-container,
+    .pics-container{
+      position: relative;
+      height: 62%;
+    }
+    .description-container{
+      background-color: $color-white;
+      z-index: 50;
+      @include respond-to(desktop){
+        width: 100% !important;
+        height: 62% !important;
+      }
+      @include respond-to(mobile){
+        width: 100%;
+        height: 62%;
+      }
+    }
+    .description{
+      font-weight: 300;
+      font-size: 18px;
+      width: 80%;
+      margin: 0 auto;
+      @include respond-to(desktop){
+        @include centerer();
+      }
+
+      h1{
+        font-weight: 300;
+        font-size: 61px;
+        text-align: center;
+        margin-bottom: 26px;
+        @include respond-to(mobile){
+          font-size: 36px;
+          margin-bottom: 20px;
+          margin-top: 80px;
+        }
+        @include respond-to(mobile-i5){
+          font-size: 30px;
+          margin-bottom: 30px;
+        }
+        @include respond-to(mobile-i4){
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+        b{
+          font-weight: 500;
+          font-size: 66px;
+          @include respond-to(mobile){
+            font-size: 40px;
+          }
+          @include respond-to(mobile-i5){
+            font-size: 34px;
+          }
+          @include respond-to(mobile-i4){
+            font-size: 28px;
+          }
+        }
+      }
+      p{
+        margin-bottom: 70px;
+        font-weight: 300;
+        font-size: 22px;
+        @include respond-to(mobile){
+          font-size: 17px;
+          margin-bottom: 0;
+        }
+        @include respond-to(mobile-i4){
+          font-size: 14px;
+          margin-bottom: 0;
+        }
+      }
+    }
+    .indicator-container,
+    .headline-container{
+      position: relative;
+      height: 38%;
+    }
+    .indicator{
+      position: absolute;
+      bottom: 50px;
+      width: 100%;
+      @include respond-to(mobile){
+        bottom: 10px;
+        color: $color-white;
+      }
+
+      p{
+        margin: 0 auto;
+        font-weight: 500;
+        font-size: 12px;
+        letter-spacing: 1px;
+        &.text-uppercase{
+          padding-bottom: 20px;
+          @include respond-to(mobile){
+            padding-bottom: 10px;
+            padding-top: 35px;
+          }
+          span{
+            cursor: pointer;
+          }
+        }
+      }
+      img{
+        cursor: pointer;
+      }
+    }
+    .headline-container{
+      text-align: center;
+      font-size: 14px;
+      h6, h3{
+        color: $color-green;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+        margin: 0;
+      }
+      h6{
+        margin-bottom: 50px;
+        @include respond-to(mobile){
+          font-size: 16px;
+        }
+      }
+      h3{
+        font-size: 28px;
+        margin-bottom: 25px;
+      }
+      p{
+        padding: 0 20px;
+        font-weight: 300;
+        @include respond-to(mobile){
+          font-size: 16px;
+        }
+      }
+    }
+    .pics-container{
+      padding-top: 40px;
+    }
+    img.devices{
+      width: 100%;
+    }
+    &--mask{
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.2);
+    }
+    &--landing{
+      z-index: 50;
+      color: $color-white;
+      @include respond-to(mobile){
+        color: $color-black;
+      }
+    }
+    &--features{
+      background-color: $color-white;
+
+      .indicator-container{
+        width: 100%;
+      }
+      div.stage{
+        transform-origin: top left;
+        position: relative;
+        margin: 0 auto;
+        width: 1024px;
+        height: 768px;
+        img{
+          width: 100%;
+        }
+      }
+      &.feature1{
+        z-index: 40;
+        @include respond-to(mobile){
+          height: auto;
+          background: none;
+        }
+      }
+      &.feature2{
+        z-index: 30;
+        @include respond-to(mobile){
+          background: none;
+        }
+      }
+      &.feature3{
+        @include  respond-to(desktop){
+          z-index: 20;
+        }
+      }
+      &.feature4{
+        @include  respond-to(desktop){
+          z-index: 10;
+        }
+      }
+    }
+  }
+
+  &__steps{
+    background-color: #49A74F;
+    min-height: 480px;
+    padding: 60px 0;
+    color: $color-white;
+    &--mobile{
+      height: auto;
+      padding-bottom: 20px;
+    }
+    .step{
+      width: 70%;
+      margin: 0 auto 80px auto;
+      padding: 5px 0 0 30px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 52px 52px;
+      text-align: left;
+      @include respond-to(mobile){
+        padding: 10px 0 0 40px;
+      }
+      &--1{
+        background-image: url("../../../assets/images/homepage/step-icon-1.png");
+      }
+      &--2{
+        background-image: url("../../../assets/images/homepage/step-icon-2.png");
+      }
+      &--3{
+        background-image: url("../../../assets/images/homepage/step-icon-3.png");
+      }
+    }
+
+    h1{
+      text-align: center;
+      font-weight: 500;
+      width: 50%;
+      margin: 0 auto;
+      @include respond-to(mobile){
+        font-size: 32px;
+        width: 80%;
+        margin-bottom: 80px;
+      }
+    }
+
+    h2{
+      font-size: 32px;
+      font-weight: 500;
+      text-align: left;
+      margin-bottom: 20px;
+      @include respond-to(mobile){
+        font-size: 30px;
+      }
+    }
+
+    p{
+      margin: 0;
+      font-size: 18px;
+    }
+    ul{
+      margin: 70px auto 0;
+      width: 100%;
+      padding: 0 42px;
+      min-height: 210px;
+      position: relative;
+      @include respond-to(mobile){
+        background: none;
+        width: 100%;
+      }
+    }
+    li{
+      text-align: left;
+      font-size: 14px;
+      font-weight: 300;
+      padding: 10px 42px 0;
+
+      background-size: 52px 52px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      &.step1{
+        background-image: url("../../../assets/images/homepage/step-icon-1.png");
+      }
+      &.step2{
+        background-image: url("../../../assets/images/homepage/step-icon-2.png");
+      }
+      &.step3{
+        background-image: url("../../../assets/images/homepage/step-icon-3.png");
+      }
+    }
+  }
+  &__steps-container{
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  &__slider{
+    min-height: 400px;
+    @include respond-to(mobile){
+      padding-bottom: 50px;
+    }
+    h1{
+      font-weight: 500;
+      font-size: 36px;
+      color: $color-green;
+      margin: 60px 0 50px;
+    }
+
+    h6{
+      color: $color-green;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      max-width: 1024px;
+      padding-bottom: 40px;
+    }
+    .swiper-container--mobile {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      .swiper-pagination-bullet-active{
+        background-color: $color-green;
+      }
+    }
+    .swiper-pagination--mobile{
+      margin-top: 20px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+
+      p{
+        font-weight: 300;
+        font-size: 18px;
+        margin: 40px 0;
+        @include respond-to(mobile){
+          padding: 0 20px;
+        }
+      }
+    }
+
+    .swiper-button-next{
+      background: url("../../../assets/images/homepage/gradient-right.png") no-repeat 0 0;
+    }
+    .swiper-button-prev{
+      background: url("../../../assets/images/homepage/gradient-left.png") no-repeat 0 0;
+    }
+    .swiper-button-next,
+    .swiper-button-prev{
+      width: 122px;
+      height: 100%;
+      margin:0 -15px;
+      top: 0;
+      img{
+        margin-top: 50%;
+      }
+      &.swiper-button-disabled{
+        @include opacity(1);
+        img{
+          @include opacity(0.35);
+        }
+      }
+    }
+  }
+
+  &__divider--mobille{
+    background: url("../../../assets/images/divider.svg") no-repeat center 0;
+    height: 3px;
+    width: 100%;
+    margin: 40px 0;
+  }
+}
+

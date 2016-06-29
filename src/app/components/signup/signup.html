@@ -1,0 +1,22 @@
+<div class="signup">
+  <div class="signup__close">
+    <a ng-click="vm.closeSignup()">
+      <img src="../../../assets/images/close-btn.svg" alt="">
+    </a>
+  </div>
+
+  <div class="signup__content">
+    <h2>Sign Up</h2>
+    <p ng-bind="vm.signUpDescription"></p>
+    <div class="signup__email">
+      <div ng-show="vm.inputFocused" class="text-uppercase">Email</div>
+      <div>
+        <input ng-class="{focused: vm.inputFocused}" type="text" name="email" placeholder="{{vm.placeholder}}">
+      </div>
+    </div>
+    <div class="signup__email-err" ng-show="vm.emailErr">Invalid Email</div>
+  </div>
+
+  <a ng-click="vm.submitSignup()" class="cilbtn text-uppercase" ng-class="{'disabled': vm.emailErr}">Confirm</a>
+
+</div>

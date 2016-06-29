@@ -1,0 +1,69 @@
+<section class="homepage__animated">
+  <section class="homepage__panel homepage__panel--landing random-bg" ng-style="{'background-image': 'url({{vm.randomBg}})'}">
+    <div class="homepage__panel--mask">
+      <div class="description" id="homepage__landingDesc">
+        <h1 ng-bind-html="vm.landing.landingTitle"></h1>
+        <p ng-bind-html="vm.landing.landingDescription"></p>
+        <a ng-click="vm.signup()" class="cilbtn text-uppercase" ng-bind="vm.landing.landingStartButton"></a>
+      </div>
+
+      <div class="indicator">
+        <p class="text-uppercase"><span ng-click="vm.seeFeature()">see the feature</span></p>
+        <p><img ng-click="vm.seeFeature()" src="../../../assets/images/arrow-down.svg" alt=""></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="homepage__panel homepage__panel--features feature1 feature1--desktop">
+    <div class="stage">
+      <img ng-src="{{vm.landing.animationImageDesktop1.fields.file.url}}" alt="">
+    </div>
+  </section>
+
+  <section class="homepage__panel homepage__panel--features feature2 feature2--desktop">
+    <div class="stage">
+      <img ng-src="{{vm.landing.animationImageDesktop2.fields.file.url}}" alt="">
+
+      <div class="desc desc--3">
+        <h1 class="text-green" ng-bind="vm.landing.animationTitle2"></h1>
+        <p ng-bind="vm.landing.animationDescription2"></p>
+      </div>
+      <div class="desc desc--4">
+        <h6 class="text-green" ng-bind="vm.landing.animationLabel2"></h6>
+      </div>
+    </div>
+  </section>
+
+  <section class="homepage__panel homepage__panel--features feature3 feature3--desktop">
+    <div class="stage">
+      <img ng-src="{{vm.landing.animationImageDesktop3.fields.file.url}}" alt="">
+
+      <div class="desc desc--5">
+        <h1 class="text-green" ng-bind="vm.landing.animationTitle3"></h1>
+        <p ng-bind="vm.landing.animationDescription3"></p>
+      </div>
+      <div class="desc desc--6">
+        <h6 class="text-green" ng-bind="vm.landing.animationLabel3"></h6>
+      </div>
+    </div>
+  </section>
+
+  <section class="homepage__panel homepage__panel--features feature4 feature4--desktop">
+    <div class="stage">
+      <img ng-src="{{vm.landing.animationImageDesktop4.fields.file.url}}" alt="">
+
+      <div class="desc desc--1">
+        <h1 class="text-green" ng-bind="vm.landing.animationTitle4"></h1>
+        <p ng-bind="vm.landing.animationDescription4"></p>
+      </div>
+      <div class="desc desc--2">
+        <h6 class="text-green" ng-bind="vm.landing.animationLabel4"></h6>
+      </div>
+    </div>
+  </section>
+</section>
+
+<div class="homepage__placeholder homepage__placeholder--1"></div>
+<div class="homepage__placeholder homepage__placeholder--2"></div>
+<div class="homepage__placeholder homepage__placeholder--3"></div>
+<div class="homepage__placeholder homepage__placeholder--4"></div>

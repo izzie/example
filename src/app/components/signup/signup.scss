@@ -1,0 +1,83 @@
+.signup{
+
+  text-align: center;
+
+  &__close{
+    text-align: right;
+    a{
+      display: inline-block;
+      cursor: pointer;
+    }
+  }
+  &__content{
+    padding: 0 53px;
+    @include respond-to(mobile){
+      padding: 0;
+    }
+  }
+  h2{
+    font-weight: 500;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  p{
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  input{
+    border: 0;
+    background: transparent;
+    color: $color-black;
+    padding: 0;
+  }
+  &__email{
+    width: 100%;
+    height: 50px;
+    background-color: #FBFCFD;
+    border: 1px solid #E1E5E8;
+    border-radius: 5px 5px;
+    padding: 0 15px;
+    color: #A4AAAF;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: left;
+    .text-uppercase{
+      text-align: left;
+      height: 20px;
+      line-height: 28px;
+      font-size: 11px;
+      font-weight: 300;
+    }
+    input{
+      width: 100%;
+      line-height: 48px;
+      height: 48px;
+      color: #A4AAAF;
+      &.focused{
+        height: 28px;
+        line-height: 28px;
+      }
+    }
+
+  }
+  &__email-err{
+    text-align: left;
+    padding: 8px 3px;
+    font-size: 14px;
+    font-weight: 300;
+    color: $color-red;
+  }
+  .cilbtn{
+    width: 210px;
+    height: 48px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    display: inline-block;
+    margin: 50px 0;
+  }
+}

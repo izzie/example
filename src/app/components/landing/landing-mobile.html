@@ -1,0 +1,60 @@
+<section class="homepage__panel homepage__panel--landing">
+  <div class="description-container">
+    <div class="description">
+      <h1 ng-bind-html="vm.landing.landingTitle"></h1>
+      <p ng-bind-html="vm.landing.landingDescription"></p>
+    </div>
+  </div>
+
+  <div class="indicator-container random-bg" ng-style="{'background-image': 'url({{vm.randomBg}})'}">
+    <div class="indicator">
+      <a ng-click="vm.signup()" class="cilbtn text-uppercase" ng-bind="vm.landing.landingStartButton"></a>
+      <p class="text-uppercase">see the feature</p>
+      <p><img src="../../../assets/images/arrow-down.svg" alt=""></p>
+    </div>
+  </div>
+</section>
+
+<section class="homepage__panel homepage__panel--features feature1 feature1--mobile">
+  <div class="indicator-container">
+    <img class="devices" ng-src="{{vm.landing.animationImageMobile1.fields.file.url}}" alt="">
+  </div>
+</section>
+
+<section class="homepage__panel homepage__panel--features feature2">
+  <div class="pics-container">
+    <img class="devices" ng-src="{{vm.landing.animationImageMobile2.fields.file.url}}" alt="">
+  </div>
+
+  <div class="headline-container">
+    <h6 ng-bind="vm.landing.animationLabel2"></h6>
+    <h3 ng-bind="vm.landing.animationTitle2"></h3>
+    <p ng-bind="vm.landing.animationDescription2"></p>
+  </div>
+</section>
+
+<div class="homepage__divider--mobille"></div>
+
+<section class="homepage__panel homepage__panel--features">
+  <div class="pics-container">
+    <img class="devices" ng-src="{{vm.landing.animationImageMobile3.fields.file.url}}" alt="">
+  </div>
+  <div class="headline-container">
+    <h6 ng-bind="vm.landing.animationLabel3"></h6>
+    <h3 ng-bind="vm.landing.animationTitle3"></h3>
+    <p ng-bind="vm.landing.animationDescription3"></p>
+  </div>
+</section>
+
+<div class="homepage__divider--mobille"></div>
+
+<section class="homepage__panel homepage__panel--features">
+  <div class="pics-container">
+    <img class="devices devices--imac" ng-src="{{vm.landing.animationImageMobile4.fields.file.url}}" alt="">
+  </div>
+  <div class="headline-container">
+    <h6 ng-bind="vm.landing.animationLabel4"></h6>
+    <h3 ng-bind="vm.landing.animationTitle4"></h3>
+    <p ng-bind="vm.landing.animationDescription4"></p>
+  </div>
+</section>

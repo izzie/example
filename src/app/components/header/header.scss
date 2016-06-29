@@ -1,0 +1,143 @@
+.header{
+  width: 100%;
+  height: 96px;
+  background-color: $color-white;
+
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  left: 0;
+
+  .bg {
+    display: inline-block;
+  }
+  .nobg{
+    display: none;
+  }
+
+  &--mobile{
+    height: 80px;
+  }
+
+  ul, li{
+    margin: 0;
+  }
+
+  &__container{
+    width: 100%;
+    max-width: 1024px;
+    padding: 0 42px;
+    @include centerer();
+    @include respond-to(mobile) {
+      padding: 0 20px;
+    }
+  }
+
+  &__hamburger{
+    float: left;
+    display: block;
+    cursor: pointer;
+  }
+
+  &__signup{
+    float: right;
+    @include respond-to(mobile){
+      .cillink{
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__menu--mobile{
+    position: fixed;
+    z-index: 400;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, 0.2);
+    display: none;
+
+    div{
+      position: relative;
+      height: 0;
+      background-color: $color-white;
+    }
+    ul{
+      text-align: center;
+      padding-top: 110px;
+      padding-bottom: 40px;
+      margin: 0;
+      display: none;
+      @include respond-to(mobile-i4){
+        padding-top: 90px;
+        padding-bottom: 30px;
+      }
+    }
+    li{
+      margin-bottom: 50px;
+      @include respond-to(mobile-i4){
+        margin-bottom: 30px;
+      }
+      @include respond-to(mobile){
+        .cillink{
+          font-size: 18px;
+        }
+
+      }
+    }
+  }
+
+  &__logo{
+    display: block;
+    float: left;
+    margin-right: 42px;
+    @include respond-to(mobile){
+      float: none;
+      margin: 0;
+      display: block;
+      @include centerer();
+      img{
+        height: 21px;
+      }
+    }
+  }
+
+  &__menu{
+    float: left;
+    li{
+      font-weight: 500;
+      line-height: 33px;
+      margin-right: 36px;
+      .cillink{
+        font-size: 16px;
+        padding-top: 2px;
+      }
+    }
+  }
+
+  &__auth{
+    float: right;
+    li{
+      margin-right: 36px;
+    }
+    a{
+      font-size: 14px;
+      padding: 8px 18px;
+    }
+  }
+}
+
+.header--nobg{
+  .header{
+    background: none;
+    .bg {
+      display: none;
+    }
+    .nobg{
+      display: inline-block;
+    }
+  }
+
+}

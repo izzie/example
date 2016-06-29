@@ -1,0 +1,81 @@
+<div class="howitworks">
+  <cil-header-desktop ng-hide="vm.isMobile"></cil-header-desktop>
+  <cil-header-mobile ng-show="vm.isMobile"></cil-header-mobile>
+
+  <section class="howitworks__content" id="howitworks__content">
+
+    <div class="howitworks__label">
+      <h1>How it works</h1>
+      <p ng-bind="vm.initData.fields.description"></p>
+    </div>
+
+    <ul class="list-unstyled" id="howitworks__list">
+      <li class="pic-left">
+        <div class="howitworks__featurePic">
+          <img ng-src="/assets/images/how-it-works/feature-pic-1.png" alt="">
+        </div>
+        <div class="howitworks__feature howitworks__feature--right">
+          <h2 ng-bind="vm.initData.fields.subTitle1"></h2>
+          <p ng-bind="vm.initData.fields.subDescription1"></p>
+        </div>
+      </li>
+
+      <li class="pic-right">
+        <div class="howitworks__featurePic">
+          <img ng-src="/assets/images/how-it-works/feature-pic-2.png" alt="">
+        </div>
+        <div class="howitworks__feature">
+          <h2 ng-bind="vm.initData.fields.subTitle2"></h2>
+          <p ng-bind="vm.initData.fields.subDescription2"></p>
+        </div>
+      </li>
+
+      <li class="pic-left">
+        <div class="howitworks__featurePic">
+          <img ng-src="/assets/images/how-it-works/feature-pic-3.png" alt="">
+        </div>
+        <div class="howitworks__feature howitworks__feature--right">
+          <h2 ng-bind="vm.initData.fields.subTitle3"></h2>
+          <p ng-bind="vm.initData.fields.subDescription3"></p>
+        </div>
+      </li>
+
+      <li class="pic-right">
+        <div class="howitworks__featurePic">
+          <img ng-src="/assets/images/how-it-works/feature-pic-4.png" alt="">
+        </div>
+        <div class="howitworks__feature">
+          <h2 ng-bind="vm.initData.fields.subTitle4"></h2>
+          <p ng-bind="vm.initData.fields.subDescription4"></p>
+        </div>
+      </li>
+
+      <li class="pic-left">
+        <div class="howitworks__featurePic">
+          <img ng-src="/assets/images/how-it-works/feature-pic-5.png" alt="">
+        </div>
+        <div class="howitworks__feature howitworks__feature--right">
+          <h2 ng-bind="vm.initData.fields.subTitle5"></h2>
+          <p ng-bind="vm.initData.fields.subDescription5"></p>
+        </div>
+      </li>
+
+      <li class="pic-right">
+        <div class="howitworks__featurePic">
+          <img ng-src="/assets/images/how-it-works/feature-pic-6.png" alt="">
+        </div>
+        <div class="howitworks__feature">
+          <h2 ng-bind="vm.initData.fields.subTitle6"></h2>
+          <p ng-bind="vm.initData.fields.subDescription6"></p>
+        </div>
+      </li>
+    </ul>
+
+  </section>
+
+  <cil-waiting-for title="{{vm.initData.fields.createNowTitle}}" btn="{{vm.initData.fields.createNowButton}}"></cil-waiting-for>
+
+  <cil-footer></cil-footer>
+
+</div>
+

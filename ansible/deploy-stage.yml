@@ -1,0 +1,20 @@
+---
+- hosts: all
+  gather_facts: false
+  remote_user: cilantro
+  tasks:
+  - name: load config
+    include_vars: vars.yml
+  - name: update git repo
+    command: git --work-tree="{{main_git_foler}}" fetch --all
+    args:
+      chdir: "{{main_git_foler}}"
+  - name: make dir for deploy
+    file: path="{{build_folder}}/{{gitid}}" state=directory mode=0755
+  - name: checkout
+    command: git --work-tree="{{build_folder}}/{{gitid}}" checkout -f {{gitid}} -- .
+    args:
+      chdir: "{{main_git_foler}}"
+  - name: create symlink prod
+    file: src="{{build_folder}}/{{gitid}}" dest={{current_folder}} state=link
+    when: updatecurrent == true

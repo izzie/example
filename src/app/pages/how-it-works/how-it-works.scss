@@ -1,0 +1,138 @@
+.howitworks{
+  padding-top: 96px;
+  @include respond-to(mobile){
+    padding-top: 80px;
+  }
+  .waitingfor{
+    position: relative;
+    margin-top: -29px;
+    z-index: 1;
+    @include respond-to(mobile){
+      margin-top: -10px;
+    }
+  }
+  &__content{
+    background-color: $color-green;
+    ul{
+      @include respond-to(desktop){
+        background: url("../../../assets/images/how-it-works/curve.png") no-repeat 160px 350px;
+        background-size: 480px 2621px;
+        width: 780px;
+        margin: 0 auto;
+        position: relative;
+      }
+    }
+    li{
+      width: 100%;
+      height: 498px;
+      display: block;
+      overflow: hidden;
+      color: $color-white;
+      padding-top: 40px;
+      position: relative;
+      @include respond-to(mobile){
+        height: auto;
+        padding: 40px 0;
+      }
+      &.pic-left{
+        div.howitworks__featurePic{
+          @include respond-to(desktop){
+            float: left;
+          }
+        }
+        div.howitworks__feature{
+          @include respond-to(desktop){
+            float: right;
+          }
+        }
+      }
+      &.pic-right{
+        div.howitworks__featurePic{
+          @include respond-to(desktop){
+            float: right;
+          }
+        }
+        div.howitworks__feature{
+          @include respond-to(desktop){
+            float: left;
+          }
+        }
+      }
+    }
+  }
+  &__label{
+    margin: 0 auto;
+    padding: 30px 0;
+    color: $color-white;
+    background-color: $color-green;
+
+    @include respond-to(desktop){
+      min-height: 183px;
+      padding: 70px 0;
+      position: relative;
+    }
+
+    h1{
+      font-size: 62px;
+      font-weight: 300;
+      text-align: center;
+      margin: 0 0 40px;
+      @include respond-to(mobile){
+        font-size: 36px;
+        margin: 0 0 30px;
+      }
+    }
+    p{
+      font-size: 20px;
+      font-weight: 300;
+      text-align: center;
+      margin: 0 auto;
+      width: 80%;
+      @include respond-to(mobile){
+        font-size: 18px;
+      }
+    }
+  }
+  &__featurePic{
+    width: 400px;
+    @include respond-to(mobile){
+      width: 65%;
+      margin: 0 auto;
+    }
+    img{
+      width: 100%;
+    }
+  }
+  &__feature{
+    text-align: center;
+    padding: 0 33px;
+    @include respond-to(desktop){
+      width: 300px;
+      text-align: left;
+      padding: 0;
+
+      position: absolute;
+      top: calc(50% - 30px);
+      transform: translate(0, -50%);
+    }
+
+    &--right{
+      right: 0;
+    }
+
+    h2{
+      font-size: 32px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      @include respond-to(mobile){
+        margin: 40px 0 25px;
+      }
+    }
+    p{
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.5em;
+    }
+  }
+}
+

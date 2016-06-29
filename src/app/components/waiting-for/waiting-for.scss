@@ -1,0 +1,24 @@
+.waitingfor{
+  background-color: $color-blue;
+  color: $color-white;
+  text-align: center;
+  padding: 60px 0 40px 0;
+  @include respond-to(mobile){
+    padding: 50px 0;
+  }
+
+  h1{
+    text-align: center;
+    width: 80%;
+    font-size: 36px;
+    margin: 0 auto 40px;
+
+    @include respond-to(mobile){
+      font-size: 32px;
+    }
+  }
+
+}
+
+
+

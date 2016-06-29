@@ -1,0 +1,221 @@
+<div class="pricing">
+  <cil-header-desktop ng-hide="vm.isMobile"></cil-header-desktop>
+  <cil-header-mobile ng-show="vm.isMobile"></cil-header-mobile>
+
+  <section class="pricing__plans">
+    <section class="pricing__plansContent" id="pricing__plansContent">
+      <h1 ng-bind="vm.basic.fields.title"></h1>
+      <h6 class="pricing__plansDesc" ng-bind="vm.basic.fields.description"></h6>
+      <div class="pricing__options">
+        <div class="pricing__tooltip pricing__tooltip--placeholder hidden-xs">
+          <div class="tooltip top" role="tooltip">
+            <div class="tooltip-arrow"></div>
+            <div class="tooltip-inner">2 months for free</div>
+          </div>
+        </div>
+        <div class="pricing__tooltip hidden-xs">
+          <div class="tooltip top" role="tooltip">
+            <div class="tooltip-arrow"></div>
+            <div class="tooltip-inner">2 months for free</div>
+          </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="pricing__tab" ng-class="{'pricing__tab--active': vm.isMonthPlan}">
+          <a ng-click="vm.isMonthPlan = true" class="text-uppercase">MONTHLY PLANS</a>
+        </div>
+        <div class="pricing__tab" ng-class="{'pricing__tab--active': !vm.isMonthPlan}">
+          <a ng-click="vm.isMonthPlan = false" class="text-uppercase">ANNUAL PLANS</a>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="pricing__tooltip pricing__tooltip--placeholder visible-xs">
+          <div class="tooltip bottom" role="tooltip">
+            <div class="tooltip-arrow"></div>
+            <div class="tooltip-inner">2 months for free</div>
+          </div>
+        </div>
+        <div class="pricing__tooltip visible-xs">
+          <div class="tooltip bottom" role="tooltip">
+            <div class="tooltip-arrow"></div>
+            <div class="tooltip-inner">2 months for free</div>
+          </div>
+        </div>
+      </div>
+
+      <div ng-show="vm.isMonthPlan" class="pricing__packages row">
+          <div class="col-sm-4 col-xs-12">
+            <div class="pricing__package pricing__package--green">
+              <h2>Starter</h2>
+              <p>Less than <b>15 orders</b> per month</p>
+              <div class="pricing__package-items">
+                <h1>Free</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4 col-xs-12">
+            <div class="pricing__package">
+              <h2>Basic</h2>
+              <p>Between <b>15-200 orders</b> per month</p>
+              <div class="pricing__package-items">
+                <div>
+                  <h1>$119<span>/mo</span></h1>
+                  <p class="yearly placeholder"></p>
+                </div>
+                <div>
+                  <h2>+ $59<span class="small">/mo</span></h2>
+                  <p class="yearly"></p>
+                  <div class="tips">for each additional location</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4 col-xs-12">
+            <div class="pricing__package">
+              <h2>Pro</h2>
+              <p>More than <b>200 orders</b> per month</p>
+              <div class="pricing__package-items">
+                <div>
+                  <h1>$119<span>/mo</span></h1>
+                  <p class="yearly placeholder"></p>
+                </div>
+                <div>
+                  <h2>+ $59<span class="small">/mo</span></h2>
+                  <p class="yearly"></p>
+                  <div class="tips">for each additional location</div>
+                </div>
+                <div>
+                  <h2>+ $10<span class="small">/mo</span></h2>
+                  <p class="yearly"></p>
+                  <div class="tips">for every 100 orders above 200 orders</div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div ng-hide="vm.isMonthPlan" class="pricing__packages row">
+        <div class="col-sm-4 col-xs-12">
+          <div class="pricing__package pricing__package--green">
+            <h2>Starter</h2>
+            <p>Less than <b>15 orders</b> per month</p>
+            <div class="pricing__package-items">
+              <h1>Free</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-xs-12">
+          <div class="pricing__package">
+            <h2>Basic</h2>
+            <p>Between <b>15-200 orders</b> per month</p>
+            <div class="pricing__package-items">
+              <div>
+                <h1>$99<span>/mo</span></h1>
+                <p class="yearly placeholder">($1,188 /yr)</p>
+              </div>
+              <div>
+                <h2>+ $49<span class="small">/mo</span></h2>
+                <p class="yearly">($588 /yr)</p>
+                <div class="tips">for each additional location</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-xs-12">
+          <div class="pricing__package">
+            <h2>Pro</h2>
+            <p>More than <b>200 orders</b> per month</p>
+            <div class="pricing__package-items">
+              <div>
+                <h1>$99<span>/mo</span></h1>
+                <p class="yearly placeholder">($1,188 /yr)</p>
+              </div>
+              <div>
+                <h2>+ $49<span class="small">/mo</span></h2>
+                <p class="yearly">($588 /yr)</p>
+                <div class="tips">for each additional location</div>
+              </div>
+              <div>
+                <h2>+ $10<span class="small">/mo</span></h2>
+                <p class="yearly"></p>
+                <div class="tips">for every 100 orders above 200 orders</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section class="pricing__start">
+    <div class="pricing__start-container">
+      <h1 ng-bind="vm.basic.fields.freeTryTitle"></h1>
+      <div class="pricing__start-content">
+        <div class="pricing__email">
+          <div ng-show="vm.inputFocused" class="text-uppercase">Email</div>
+          <div>
+            <input ng-class="{focused: vm.inputFocused}" type="text" name="email" placeholder="{{vm.placeholder}}">
+          </div>
+          <div class="pricing__email-err" ng-class="{'active': vm.emailErr}">Invalid Email</div>
+        </div>
+        <a ng-click="vm.submitSignup()" class="cilbtn cilbtn--white text-uppercase">try for free</a>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing__features">
+    <div class="pricing__features-headline">
+      <h1 ng-bind="vm.basic.fields.featuresTitle"></h1>
+      <p ng-bind="vm.basic.fields.featuresDescription"></p>
+    </div>
+
+    <div class="row pricing__features-content">
+      <div class="col-sm-4 col-xs-6" ng-repeat="feature in vm.features">
+        <div class="pricing__features-cell">
+          <h6 ng-bind="feature"></h6>
+          <img src="../../../assets/images/checked-icon.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing__faq">
+    <h1>Frequently asked questions</h1>
+
+    <div class="row pricing__faq-content">
+      <div class="col-sm-6 col-xs-12" ng-repeat="importtantFaq in vm.importantFaqs">
+        <div class="pricing__faq-card">
+          <h6 ng-bind="importtantFaq.fields.question"></h6>
+          <p ng-bind="importtantFaq.fields.answer"></p>
+        </div>
+      </div>
+    </div>
+
+    <div uib-collapse="vm.isCollapsed" class="row pricing__faq-content">
+      <div class="col-sm-6 col-xs-12" ng-repeat="faq in vm.faqs">
+        <div class="pricing__faq-card">
+          <h6 ng-bind="faq.fields.question"></h6>
+          <p ng-bind="faq.fields.answer"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pricing__faq-arrow">
+      <a ng-click="vm.isCollapsed = !vm.isCollapsed">
+        <img ng-show="vm.isCollapsed" src="../../../assets/images/arrow-down.svg" alt="">
+        <img ng-hide="vm.isCollapsed" src="../../../assets/images/arrow-up.svg" alt="">
+      </a>
+    </div>
+  </section>
+
+  <cil-waiting-for title="{{vm.basic.fields.createNowTitle}}" btn="{{vm.basic.fields.createNowButton}}"></cil-waiting-for>
+
+  <cil-footer></cil-footer>
+</div>

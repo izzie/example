@@ -1,0 +1,86 @@
+.footer{
+  padding: 34px 42px 0 42px;
+  min-height: 120px;
+  max-width: 1024px;
+  margin: 0 auto;
+  @include respond-to(mobile){
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  &__menu{
+    @include respond-to(desktop){
+      float: left;
+    }
+    li{
+      margin-right: 26px;
+      display: inline-block;
+      @include respond-to(mobile){
+        display: block;
+        margin: 0;
+      }
+      a{
+        font-size: 16px;
+        @include respond-to(mobile){
+          font-size: 18px;
+          line-height: 80px;
+        }
+      }
+    }
+  }
+  &__social{
+    margin: 30px 0;
+    @include respond-to(desktop){
+      float: right;
+      margin: 0;
+    }
+
+    li{
+      a{
+        display: inline-block;
+      }
+      &.facebook{
+        @include respond-to(mobile){
+          margin-right: 50px;
+        }
+
+        img{
+          @include respond-to(mobile){
+            height: 45px;
+          }
+        }
+      }
+      &.twitter{
+        img{
+          @include respond-to(mobile){
+            height: 35px;
+          }
+        }
+      }
+    }
+  }
+  &__copyright{
+    @include respond-to(desktop){
+      float: left;
+    }
+  }
+  &__tnc{
+    @include respond-to(desktop){
+      float: right;
+    }
+
+    li{
+      @include respond-to(desktop){
+        display: inline-block;
+        padding: 0 10px;
+      }
+      a{
+        @include respond-to(mobile){
+          font-size: 18px;
+          line-height: 80px;
+        }
+      }
+    }
+  }
+}

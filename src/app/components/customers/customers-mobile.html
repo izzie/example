@@ -1,0 +1,16 @@
+<div class="homepage__slider">
+  <h1>Our customers love Cilantro</h1>
+  <div class="swiper-container--mobile">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" ng-repeat="customer in vm.customers">
+        <div><img ng-src="{{customer.avatar.fields.file.url}}" alt=""></div>
+        <p ng-bind="customer.description"></p>
+        <h6 ng-bind="customer.name"></h6>
+      </div>
+    </div>
+
+    <!-- Add Pagination -->
+    <div class="swiper-pagination--mobile"></div>
+  </div>
+
+</div>

@@ -1,0 +1,99 @@
+.cillink{
+  font-size: 14px;
+  font-weight: 500;
+  color: $color-black;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+
+  &:hover,
+  &:focus{
+    color: $color-green;
+    text-decoration: none;
+  }
+  &:active,
+  &.active{
+    color: $color-green-dark;
+  }
+
+  &--white{
+    color: $color-white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active{
+      color: $color-yellow;
+    }
+  }
+
+  &--grey{
+    color: $color-grey;
+    font-size: 11px;
+  }
+
+  &--blue{
+    color: $color-blue;
+  }
+
+  &--bgBlue{
+    font-size: 12px;
+    color: $color-white;
+    background-color: $color-blue;
+    border-radius: 18px 18px;
+    padding: 8px 18px;
+
+    &:hover,
+    &:focus,
+    &:active{
+      color: $color-white;
+      background-color: $color-blue-dark;
+    }
+  }
+
+}
+
+.cilbtn{
+  color: $color-white;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+
+  background-color: $color-blue;
+  border-radius: 25px 25px;
+  padding: 17px 35px 15px 35px;
+
+  display: inline-block;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active{
+    color: $color-white;
+    background-color: $color-blue-dark;
+    text-decoration: none;
+  }
+  &.disabled{
+    color: $color-white;
+    background-color: $color-blue-light;
+    cursor: not-allowed;
+  }
+
+  &--white{
+    background-color: $color-white;
+    color: $color-blue;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active{
+      color: $color-blue;
+      background-color: $color-blue-light2;
+    }
+    &.disabled{
+      color: $color-blue;
+      background-color: $color-blue-light3;
+      cursor: not-allowed;
+    }
+  }
+}

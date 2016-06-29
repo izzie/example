@@ -1,0 +1,26 @@
+/* Fonts */
+$font-family-ExtraBold: "BlissPro-ExtraBold";
+$font-family-BlissPro: "BlissPro";
+$font-family-MuseoSans: "Museo Sans Cyrl";
+
+
+/* Color */
+$color-white:         #FFFFFF;
+$color-black:         #000000;
+$color-green:         #49A74F;
+$color-green-dark:    #38833D;
+$color-green-light:   #DFF0E0;
+$color-blue:          #1080E9;
+$color-blue-dark:     #0F6CC3;
+$color-blue-light:    #97C5EB;
+$color-blue-light2:   #E8F1F8;
+$color-blue-light3:   #E1E5E8;
+$color-grey:          #B4B4B4;
+$color-grey-light:    #F3F3F3;
+$color-yellow:        #FFC800;
+$color-red:           #C4503C;
+
+.text-black       {color: #{$color-black};}
+.text-white       {color: #{$color-white};}
+.text-green       {color: #{$color-green};}
+.text-grey        {color: #{$color-grey};}
